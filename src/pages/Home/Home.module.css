@@ -16,12 +16,13 @@
 }
 
 .title {
+    width: 90%;
     font-size: 70px;
     text-align: left;
     line-height: 70px;
     font-weight: 900;
     font-family: 'Roboto';
-    color: #2c519e;
+    color: #287dc4;
     margin-bottom: 10px;
 }
 

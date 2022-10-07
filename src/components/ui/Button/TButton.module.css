@@ -1,11 +1,16 @@
-.container {
+.container, .disabled {
     min-width: 150px;
     width: fit-content;
     padding: 10px 15px;
     border-radius: 8px;
-    background: linear-gradient(0.45turn, #355b9d, #1c93d8);
+    background: linear-gradient(0.30turn, #355b9d, #1c93d8);
     cursor: pointer;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .text {
