@@ -31,6 +31,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
+    margin: auto 0;
 }
 
 .menu_container ul li {

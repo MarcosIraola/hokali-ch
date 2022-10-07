@@ -1,16 +1,14 @@
 {
     "navbar": {
+        "home": "Home",
         "start": "Start",
-        "docs": "Docs",
+        "FAQ": "FAQ",
         "language": "Language"
     },
     "home": {
-        "title": "Projects",
-        "name": "Name",
-        "company": "Company",
-        "location": "Location",
-        "public_repos": "Public repos",
-        "bio": "Bio"
+        "title": "Take your exams online",
+        "button": "Start",
+        "description": "With Trocafone its much easier to take, send and have your exams reviewed."
     },
     "repos_card": {
         "branch": "Branch",

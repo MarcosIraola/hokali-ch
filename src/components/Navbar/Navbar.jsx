@@ -39,13 +39,18 @@ const Navbar = () => {
             <div className={styles.menu_container}>
                 <ul>
                     <li className={styles.link}>
+                        <Link to={HOME}>
+                            { t('navbar.home') }
+                        </Link>
+                    </li>
+                    <li className={styles.link}>
                         <Link to={START}>
                             { t('navbar.start') }
                         </Link>
                     </li>
                     <li className={styles.link}>
                         <Link to={START}>
-                            { t('navbar.docs') }
+                            { t('navbar.FAQ') }
                         </Link>
                     </li>
                     <li className={styles.link}> | </li>

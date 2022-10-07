@@ -1,16 +1,15 @@
 {
     "navbar": {
+        "home": "Inicio",
         "start": "Empezar",
-        "docs": "Docs",
+        "FAQ": "FAQ",
         "language": "Idioma"
     },
     "home": {
-        "title": "Proyectos",
-        "name": "Nombre",
-        "company": "Empresa",
-        "location": "Ubicación",
-        "public_repos": "Repos públicos",
-        "bio": "Bio"
+        "title": "Tomá tus examenes online",
+        "button": "Empezar",
+        "description": "Con Trocafone completa, envia y obtiene el resultado de tus exámenes."
+
     },
     "repos_card": {
         "branch": "Rama",
