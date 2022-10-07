@@ -1,8 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import Start from './views/Start/Start';
-import Landing from './views/Landing/Landing';
+import { Navbar } from './components';
+import Start from './pages/Start/Start';
+import Landing from './pages/Landing/Landing';
+import { HOME, START } from './routes/routes';
 
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
         <div className="App">
             <Navbar />
             <Routes>
-                <Route exact path='/' element={<Landing/>} />
-                <Route exact path='/start' element={<Start/>} />
+                <Route exact path={HOME} element={<Landing/>} />
+                <Route exact path={START} element={<Start/>} />
             </Routes>
         </div>
     );

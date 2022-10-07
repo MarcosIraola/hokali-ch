@@ -5,6 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
 import 'antd/dist/antd.css';
 import { useTranslation } from 'react-i18next';
+import { HOME, START } from '../../routes/routes';
 
 const Navbar = () => {
 
@@ -19,7 +20,7 @@ const Navbar = () => {
                     onClick: () => i18n.changeLanguage('en')
                 },
                 {
-                    label: 'Spanish',
+                    label: 'Español',
                     key: '1',
                     onClick: () => i18n.changeLanguage('es')
                 }
@@ -31,19 +32,19 @@ const Navbar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.logo_container}>
-                <Link to='/'>
+                <Link to={HOME}>
                     <img className={styles.logo} src={require('../../assets/logo.png')}/>
                 </Link>
             </div>
             <div className={styles.menu_container}>
                 <ul>
                     <li className={styles.link}>
-                        <Link to='/start'>
+                        <Link to={START}>
                             { t('navbar.start') }
                         </Link>
                     </li>
                     <li className={styles.link}>
-                        <Link to='/start'>
+                        <Link to={START}>
                             { t('navbar.docs') }
                         </Link>
                     </li>
