@@ -4,8 +4,11 @@ import styles from './Navbar.module.css'
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space } from 'antd';
 import 'antd/dist/antd.css';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+
+    const { t, i18n } = useTranslation();
 
     const menu = (
         <Menu
@@ -13,12 +16,12 @@ const Navbar = () => {
                 {
                     label: 'English',
                     key: '0',
-                    onClick: () => console.log('english')
+                    onClick: () => i18n.changeLanguage('en')
                 },
                 {
                     label: 'Spanish',
                     key: '1',
-                    onClick: () => console.log('spanish')
+                    onClick: () => i18n.changeLanguage('es')
                 }
             ]}
         />
@@ -36,12 +39,12 @@ const Navbar = () => {
                 <ul>
                     <li className={styles.link}>
                         <Link to='/start'>
-                            Start
+                            { t('navbar.start') }
                         </Link>
                     </li>
                     <li className={styles.link}>
                         <Link to='/start'>
-                            Docs
+                            { t('navbar.docs') }
                         </Link>
                     </li>
                     <li className={styles.link}> | </li>
@@ -49,7 +52,7 @@ const Navbar = () => {
                         <Dropdown overlay={menu} trigger={['click']}>
                             <a onClick={e => e.preventDefault()}>
                                 <Space>
-                                    Language<DownOutlined />
+                                    { t('navbar.language') }<DownOutlined />
                                 </Space>
                             </a>
                         </Dropdown>
