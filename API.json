@@ -1,0 +1,124 @@
+{
+  "uuid": "15be6630-b3de-4af3-b111-bafe905c2301",
+  "lastMigration": 22,
+  "name": "API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 5432,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "f654eede-99a5-4a7a-9698-ca1564b005ce",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "exams",
+      "responses": [
+        {
+          "uuid": "e4209c8e-6676-4845-ae04-faaae74c01f2",
+          "body": "{\n  \"exams\": [\n    {{# repeat (queryParam 'total' '1') }}\n    {\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"score\": null,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"option_1\": {\"text\": \"Verdadero\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Falso\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"option_1\": {\"text\": \"Declarar un input\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n            \"option_3\": {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n{\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"CSS\",\n        \"description\": \"Conoces esta reglas de CSS?\",\n        \"score\": null,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"option_1\": {\"text\": \"Verdadero\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Falso\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"option_1\": {\"text\": \"Declarar un input\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n            \"option_3\": {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    \n    {{/ repeat }}\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "6eefcfa9-feec-4429-84d8-094c42e0d1f2",
+          "body": "{\"Bad request\"}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "55332df2-050c-496d-b7a5-a4b287f654f3",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "exams/:id",
+      "responses": [
+        {
+          "uuid": "bb230087-c8de-4ebc-8567-8339e24ee511",
+          "body": "{\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"option_1\": {\"text\": \"Verdadero\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Falso\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"option_1\": {\"text\": \"Declarar un input\", \"isCorrect\": true},\n            \"option_2\": {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n            \"option_3\": {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n  }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
