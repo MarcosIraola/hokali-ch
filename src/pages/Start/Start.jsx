@@ -35,10 +35,9 @@ const Start = () => {
                         onInput={e => setName(e.target.value)}
                     />
                 </div>
-                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!'/>
-                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!'/>
-                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!'/>
-
+                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!' id='1'/>
+                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!' id='2'/>
+                <ExamCard title='Math' description='Lorem impsum titus a griad du bere th december!' id='3'/>
             </div>
 
         </div>

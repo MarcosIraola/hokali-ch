@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": "Home",
-        "start": "Start",
+        "start": "Your Exams",
         "FAQ": "FAQ",
         "language": "Language"
     },
@@ -9,12 +9,5 @@
         "title": "Take your exams online",
         "button": "Start",
         "description": "With Trocafone its much easier to take, send and have your exams reviewed."
-    },
-    "repos_card": {
-        "branch": "Branch",
-        "language": "Language",
-        "update": "Last update",
-        "goto": "Go to repo",
-        "details": "See details"
     }
 }

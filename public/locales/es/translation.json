@@ -1,7 +1,7 @@
 {
     "navbar": {
         "home": "Inicio",
-        "start": "Empezar",
+        "start": "Tus Exámenes",
         "FAQ": "FAQ",
         "language": "Idioma"
     },
@@ -10,12 +10,5 @@
         "button": "Empezar",
         "description": "Con Trocafone completa, envia y obtiene el resultado de tus exámenes."
 
-    },
-    "repos_card": {
-        "branch": "Rama",
-        "language": "Lenguaje",
-        "update": "Ult. modificación",
-        "goto": "Ir al repo",
-        "details": "Ver detalle"
     }
 }

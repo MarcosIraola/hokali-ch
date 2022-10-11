@@ -3,6 +3,7 @@ import TButton from '../../components/ui/Button/TButton'
 import styles from './Home.module.css'
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { START } from '../../routes/routes';
 
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
     const { t, i18n } = useTranslation();
 
     const testMe = () => {
-        navigate("/start");
+        navigate(START);
     }
 
     return (

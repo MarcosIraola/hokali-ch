@@ -1,2 +1,3 @@
 export const HOME = '/';
-export const START = '/start';
+export const START = '/exams';
+export const EXAM = '/exams/:id'
