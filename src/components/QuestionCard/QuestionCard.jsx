@@ -12,8 +12,8 @@ const QuestionCard = (props) => {
                 return (
                     <div className={styles.trueOrFalse_container}>
                         {
-                            question.answers.map((option) => (
-                                <button className={styles.tof_button}>{option.text}</button>
+                            question.answers.map((option, index) => (
+                                <button key={index} className={styles.tof_button}>{option.text}</button>
                             ))
                         }
                     </div>
@@ -23,8 +23,8 @@ const QuestionCard = (props) => {
                 return (
                     <div className={styles.radioButton_container}>
                         {
-                            question.answers.map((option) => (
-                                <p>{option.text}</p>
+                            question.answers.map((option, index) => (
+                                <p key={index}>{option.text}</p>
                             ))
                         }
                     </div>

@@ -34,7 +34,9 @@ const ExamView = () => {
             <div className={styles.questions_container}>
                 {
                     exam?.questions.map((question, index) => (
-                        <QuestionCard key={index} question={question}/>
+                        <div className={styles.question}>
+                            <QuestionCard key={index} question={question}/>
+                        </div>
                     ))
                 }
             </div>
