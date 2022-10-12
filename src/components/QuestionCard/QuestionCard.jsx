@@ -7,19 +7,21 @@ const QuestionCard = (props) => {
 
     const renderAnswer = () => {
         switch (question.type) {
+            // CASE 1 == VERDADERO O FALSO
             case 1:
                 return (
-                    <div className={styles.TrueOrFalse_container}>
+                    <div className={styles.trueOrFalse_container}>
                         {
                             question.answers.map((option) => (
-                                <p>{option.text}</p>
+                                <button className={styles.tof_button}>{option.text}</button>
                             ))
                         }
                     </div>
                     )
+            // CASE 2 == MULTIPLECHOICE
             case 2:
                 return (
-                    <div className={styles.RadioButton_container}>
+                    <div className={styles.radioButton_container}>
                         {
                             question.answers.map((option) => (
                                 <p>{option.text}</p>
@@ -27,9 +29,10 @@ const QuestionCard = (props) => {
                         }
                     </div>
                 )
+            // CASE 3 == ANSWER
             case 3:
                 return (
-                    <div className={styles.TextArea_container}>
+                    <div className={styles.textArea_container}>
                          <textarea name="description" defaultValue="Your answer here.." />
                     </div>
                 )
@@ -38,10 +41,9 @@ const QuestionCard = (props) => {
         }
     }
 
-
     return (
         <div className={styles.container}>
-            <h1>{question.question}</h1>
+            <h1 className={styles.title}>{question.question}</h1>
             { renderAnswer() }
         </div>
     )

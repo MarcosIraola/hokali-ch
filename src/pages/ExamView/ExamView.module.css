@@ -1,5 +1,9 @@
 
-
+.questions_container {
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+}
 
 .button_container {
     align-items: end;

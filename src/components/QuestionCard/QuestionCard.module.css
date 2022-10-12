@@ -1,0 +1,24 @@
+.title {
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Roboto';
+    color: #287dc4;
+}
+
+.trueOrFalse_container {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.tof_button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.tof_button_clicked {
+    background-color: green;
+}
