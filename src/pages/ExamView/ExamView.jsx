@@ -3,11 +3,14 @@ import TButton from '../../components/ui/Button/TButton'
 import styles from './ExamView.module.css'
 import {useParams} from 'react-router-dom'
 import QuestionCard from '../../components/QuestionCard/QuestionCard'
+import Modal from '../../components/ui/Modal/Modal'
 
 const ExamView = () => {
 
     const params = useParams();
     const [exam, setExam] = useState();
+
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
         const url = `http://127.0.0.1:5432/exams/${params.id}`;
@@ -27,6 +30,9 @@ const ExamView = () => {
 
     return (
         <div className={styles.container}>
+
+            <Modal showModal={showModal} cancelClick={() => setShowModal(false)}/>
+
             <div className={styles.info_container}>
                 <h1>{exam?.title}</h1>
                 <p>{exam?.description}</p>
@@ -41,7 +47,7 @@ const ExamView = () => {
                 }
             </div>
             <div className={styles.button_container}>
-                <TButton title='Submit'/>
+                <TButton title='Submit' function_1={() => setShowModal(true)}/>
             </div>
         </div>
     )
