@@ -1,32 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import TButton from '../../components/ui/Button/TButton'
 import styles from './ExamView.module.css'
+import {useParams} from 'react-router-dom'
+import QuestionCard from '../../components/QuestionCard/QuestionCard'
 
 const ExamView = () => {
+
+    const params = useParams();
+    const [exam, setExam] = useState();
+
+    useEffect(() => {
+        const url = `http://127.0.0.1:5432/exams/${params.id}`;
+        const options = {
+            method: 'GET',
+            headers: {"Content-type": "application/json"},
+        };
+        fetch(url, options)
+            .then(response => response.json())
+            .then(payload => {
+                setExam(payload);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }, [])
+
     return (
         <div className={styles.container}>
             <div className={styles.info_container}>
-                <h1>Evaluacion Full Stack Developer</h1>
-                <p>
-                    En esta evaulacion buscamos evaluar tu senority. 
-                    El resultado de la evaluación lo vas a poder ver una vez terminada la misma.
-                </p>
+                <h1>{exam?.title}</h1>
+                <p>{exam?.description}</p>
             </div>
             <div className={styles.questions_container}>
-                <div>
-                    <h2>Verdadero o falso: HTML es un lenguaje de programación.</h2>
-                    <span>Verdadero | Falso</span>
-                </div>
-                <div>
-                    <h2>Verdadero o falso: HTML es un lenguaje de programación.</h2>
-                    <p>Opcion 1</p>
-                    <p>Opcion 2</p>
-                    <p>Opcion 3</p>
-                </div>
-                <div>
-                    <h2>Verdadero o falso: HTML es un lenguaje de programación.</h2>
-                    <textarea>Your answer here...</textarea>
-                </div>
+                {
+                    exam?.questions.map((question) => (
+                        <QuestionCard question={question}/>
+                    ))
+                }
             </div>
             <div className={styles.button_container}>
                 <TButton title='Submit'/>

@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react'
 import styles from './Start.module.css'
 import TButton from '../../components/ui/Button/TButton'
 import ExamCard from '../../components/ExamsCard/ExamCard'
-import { useGetExamsQuery } from '../../services/examsApi';
+import { useGetExamsQuery } from '../../redux/examsApi';
 import { Spin } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons';
 
 const Start = () => {
 
-    const [search, setSearch] = useState('')
     const { data: exams, isFetching } = useGetExamsQuery();
-    const [filteredExams, setFilteredExams] = useState([])
 
     const [completedExams, setCompletedExams] = useState([])
     const [incompletedExams, setIncompletedExams] = useState([])
+
+    const [search, setSearch] = useState('')
+    const [filteredExams, setFilteredExams] = useState([])
 
     useEffect(() => {
         let completed = [];
@@ -27,27 +28,27 @@ const Start = () => {
             }
         });
 
-        console.log(incompletedExams)
         setCompletedExams(completed);
         setIncompletedExams(incompleted);
+        // setFilteredExams(incompleted)
 
     }, [isFetching]);
 
-    useEffect(() => {
-        const newVal = exams?.exams.filter((exam) => {
-            if (search === '') {
-                return exam;
-            } else {
-                return exam.title.toLowerCase().includes(search)
-            }
-        })
+    // useEffect(() => {
+    //     const newVal = incompletedExams.filter((exam) => {
+    //         if (search === '') {
+    //             return exam;
+    //         } else {
+    //             return exam.title.toLowerCase().includes(search)
+    //         }
+    //     })
 
-        if(search.length > 0) {
-            setFilteredExams(newVal)
-        } else {
-            setFilteredExams(incompletedExams)
-        }
-    }, [search])
+    //     if(search.length > 0) {
+    //         setFilteredExams(newVal)
+    //     } else {
+    //         setFilteredExams(incompletedExams)
+    //     }
+    // }, [search])
 
     return (
         <div className={styles.container}>
@@ -83,11 +84,11 @@ const Start = () => {
                     />
                 </div>
                 {
-                    filteredExams?.length < 1 
+                    incompletedExams?.length < 1 
                     ? 
                     <span>No exams found.</span>
                     :
-                    filteredExams?.map((exam, index) => (
+                    incompletedExams?.map((exam, index) => (
                         <ExamCard
                             key={index}
                             id={exam.id} 

@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { examsApi } from "../services/examsApi";
+import { examsApi } from "./examsApi";
 
 export default configureStore({
     reducer: {
