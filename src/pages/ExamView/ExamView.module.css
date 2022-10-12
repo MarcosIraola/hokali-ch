@@ -1,4 +1,11 @@
 
+.goBack {
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    cursor: pointer;
+}
+
 .questions_container {
     text-align: left;
     width: 70%;

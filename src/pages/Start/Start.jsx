@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Start.module.css'
-import TButton from '../../components/ui/Button/TButton'
 import ExamCard from '../../components/ExamsCard/ExamCard'
 import { useGetExamsQuery } from '../../redux/examsApi';
-import { Spin } from 'antd'
-import { LoadingOutlined } from '@ant-design/icons';
 
 const Start = () => {
 

@@ -4,35 +4,47 @@ import styles from './ExamView.module.css'
 import {useParams} from 'react-router-dom'
 import QuestionCard from '../../components/QuestionCard/QuestionCard'
 import Modal from '../../components/ui/Modal/Modal'
+import { useGetExamsQuery } from '../../redux/examsApi';
+import { useNavigate } from 'react-router-dom';
 
 const ExamView = () => {
 
+    const navigate = useNavigate();
     const params = useParams();
+    const { data: exams, isFetching } = useGetExamsQuery();
     const [exam, setExam] = useState();
 
     const [showModal, setShowModal] = useState(false)
 
+    // useEffect(() => {
+    //     const url = `http://127.0.0.1:5432/exams/${params.id}`;
+    //     const options = {
+    //         method: 'GET',
+    //         headers: {"Content-type": "application/json"},
+    //     };
+    //     fetch(url, options)
+    //         .then(response => response.json())
+    //         .then(payload => {
+    //             setExam(payload);
+    //         })
+    //         .catch(error => {
+    //             console.log(error)
+    //         })
+    // }, [])
+
     useEffect(() => {
-        const url = `http://127.0.0.1:5432/exams/${params.id}`;
-        const options = {
-            method: 'GET',
-            headers: {"Content-type": "application/json"},
-        };
-        fetch(url, options)
-            .then(response => response.json())
-            .then(payload => {
-                setExam(payload);
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }, [])
+        exams.exams.filter((exam) => {
+            if(exam.id === params.id) {
+                setExam(exam)
+            }
+        })
+    }, [isFetching])
 
     return (
         <div className={styles.container}>
 
             <Modal showModal={showModal} cancelClick={() => setShowModal(false)}/>
-
+            <span onClick={() => navigate(-1)} className={styles.goBack}>&#x3c; Go back</span>
             <div className={styles.info_container}>
                 <h1>{exam?.title}</h1>
                 <p>{exam?.description}</p>
