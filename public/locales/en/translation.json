@@ -9,5 +9,21 @@
         "title": "Take your exams online",
         "button": "Start",
         "description": "With Trocafone its much easier to take, send and have your exams reviewed."
+    },
+    "start": {
+        "welcome": "Welcome",
+        "completed": "Completed Exams",
+        "incompleted": "Exams to complete",
+        "number_completed": "You have 0 completed exams.",
+        "number_incompleted": "No wxams where found."
+    },
+    "examCard": {
+        "completed": "Completed",
+        "start": "Start"
+    },
+    "examView": {
+        "goBack": "Go back",
+        "submit": "Submit"
     }
+
 }

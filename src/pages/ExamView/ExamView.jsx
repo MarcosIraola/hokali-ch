@@ -6,10 +6,12 @@ import QuestionCard from '../../components/QuestionCard/QuestionCard'
 import Modal from '../../components/ui/Modal/Modal'
 import { useGetExamsQuery } from '../../redux/examsApi';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ExamView = () => {
 
     const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
     const params = useParams();
     const { data: exams, isFetching } = useGetExamsQuery();
     const [exam, setExam] = useState(undefined);
@@ -75,7 +77,7 @@ const ExamView = () => {
         <div className={styles.container}>
 
             <Modal showModal={showModal} mainFunction={() => navigate(-1)} score={showScore}/>
-            <span onClick={() => navigate(-1)} className={styles.goBack}>&#x3c; Go back</span>
+            <span onClick={() => navigate(-1)} className={styles.goBack}>&#x3c; { t('examView.goBack')}</span>
             <div className={styles.info_container}>
                 <h1>{exam?.title}</h1>
                 <p>{exam?.description}</p>
@@ -93,12 +95,12 @@ const ExamView = () => {
                     <div className={styles.error_container}>
                         <p>Hubo un error. Vuelva a intentarlo.</p>
                         <div className={styles.button_container}>
-                            <TButton title='Go Back' function_1={() => navigate(-1)}/>
+                            <TButton title={ t('examView.goBack')} function_1={() => navigate(-1)}/>
                         </div>
                     </div>
                     :
                     <div className={styles.button_container}>
-                        <TButton title='Submit' function_1={saveExam}/>
+                        <TButton title={ t('examView.submit')}function_1={saveExam}/>
                     </div>
                 }
             </div>

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { START } from '../../routes/routes';
 
-
 const Home = () => {
 
     const navigate = useNavigate();

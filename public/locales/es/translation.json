@@ -9,5 +9,20 @@
         "title": "Tus exámenes online",
         "button": "Empezar",
         "description": "Con Trocafone completa, envia y obtiene el resultado de tus exámenes."
+    },
+    "start": {
+        "welcome": "Bienvenido",
+        "completed": "Examenes completados",
+        "incompleted": "Exams para completar",
+        "number_completed": "Tienes 0 examnes completados.",
+        "number_incompleted": "No se encontro ningun examen."
+    },
+    "examCard": {
+        "completed": "Completado",
+        "start": "Emepzar"
+    },
+    "examView": {
+        "goBack": "Volver",
+        "submit": "Enviar"
     }
 }
