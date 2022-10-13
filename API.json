@@ -15,7 +15,7 @@
       "responses": [
         {
           "uuid": "e4209c8e-6676-4845-ae04-faaae74c01f2",
-          "body": "{\n  \"exams\": [\n    {{# repeat (queryParam 'total' '1') }}\n    {\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"CSS\",\n        \"description\": \"Conoces esta reglas de CSS?\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"CSS es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n             {\"text\": \"Declarar un input\", \"isCorrect\": true},\n             {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n             {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"Javascript\",\n        \"description\": \"How much Javascript do you know?\",\n        \"score\": 66,\n        \"completed\": true,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"JAVASCRIPT es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    \n    {{/ repeat }}\n  ]\n}",
+          "body": "{\n  \"exams\": [\n    {\n        \"id\": 1,\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"CSS\",\n        \"description\": \"Conoces esta reglas de CSS?\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"CSS es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n             {\"text\": \"Declarar un input\", \"isCorrect\": true},\n             {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n             {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Javascript\",\n        \"description\": \"How much Javascript do you know?\",\n        \"score\": 66,\n        \"completed\": true,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"JAVASCRIPT es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -35,14 +35,22 @@
         },
         {
           "uuid": "6eefcfa9-feec-4429-84d8-094c42e0d1f2",
-          "body": "{\"Bad request\"}",
+          "body": "{\n  \"Bad Request\": \"Bad Request\"\n}",
           "latency": 0,
           "statusCode": 400,
           "label": "",
           "headers": [],
           "filePath": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "x-status-code",
+              "value": "400",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -60,7 +68,7 @@
       "responses": [
         {
           "uuid": "bb230087-c8de-4ebc-8567-8339e24ee511",
-          "body": "{\n        \"id\": \"{{ faker 'datatype.number' min=1 max=100 }}\",\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n  }",
+          "body": "{\n        \"id\": 1,\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n  }",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -72,6 +80,77 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
+        },
+        {
+          "uuid": "6c110893-0523-4bd8-9afd-e3a03784c2da",
+          "body": "{\n  \"status\": 400,\n  \"statusText\": \"Bad Request\",\n  \"message\": \"Bad Request\",\n  \"response\": {}\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "x-status-code",
+              "value": "400",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "8b4b72c8-9f51-4395-8c36-92bd2fef92cf",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "exams/:id",
+      "responses": [
+        {
+          "uuid": "48581352-cde9-46f6-8cda-e78cd629f515",
+          "body": "{\n    \"status\": 200,\n    \"statusText\": \"OK\",\n    \"message\": \"Exam was completed and updated correctly.\",\n    \"response\": {\n      \"score\": 66\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "2ed0e920-0ec2-411c-9589-7386004ce2b3",
+          "body": "{\n  \"status\": 400,\n  \"statusText\": \"Bad Request\",\n  \"message\": \"Bad Request\",\n  \"response\": {}\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "x-status-code",
+              "value": "400",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
         }
       ],
       "enabled": true,
@@ -106,7 +185,7 @@
     },
     {
       "key": "Access-Control-Allow-Headers",
-      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With, x-status-code"
     }
   ],
   "proxyReqHeaders": [

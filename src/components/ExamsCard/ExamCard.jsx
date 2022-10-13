@@ -22,7 +22,7 @@ const ExamCard = (props) => {
             <p className={styles.description}>{description}</p>
             { 
                 completed ? 
-                <button className={styles.button} onClick={goToExam}>View Details</button> 
+                <button className={styles.button}>Completed</button> 
                 : 
                 <button className={styles.button} onClick={goToExam}>Start</button>
             }

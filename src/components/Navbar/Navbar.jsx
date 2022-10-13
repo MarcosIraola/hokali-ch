@@ -28,7 +28,6 @@ const Navbar = () => {
         />
     );
 
-
     return (
         <div className={styles.container}>
             <div className={styles.logo_container}>
@@ -46,11 +45,6 @@ const Navbar = () => {
                     <li className={styles.link}>
                         <Link to={START}>
                             { t('navbar.start') }
-                        </Link>
-                    </li>
-                    <li className={styles.link}>
-                        <Link to={START}>
-                            { t('navbar.FAQ') }
                         </Link>
                     </li>
                     <li className={styles.link}> | </li>
