@@ -64,6 +64,7 @@ const ExamView = () => {
             .then(response => response.json())
             .then(data => {
                 setShowScore(data.response.score)
+                setShowModal(true)
             })
             .catch(error => {
                 console.log(error)
@@ -73,7 +74,7 @@ const ExamView = () => {
     return (
         <div className={styles.container}>
 
-            <Modal showModal={showModal} mainFunction={saveExam} cancelClick={() => setShowModal(false)}/>
+            <Modal showModal={showModal} mainFunction={() => navigate(-1)} score={showScore}/>
             <span onClick={() => navigate(-1)} className={styles.goBack}>&#x3c; Go back</span>
             <div className={styles.info_container}>
                 <h1>{exam?.title}</h1>
@@ -97,7 +98,7 @@ const ExamView = () => {
                     </div>
                     :
                     <div className={styles.button_container}>
-                        <TButton title='Submit' function_1={() => setShowModal(true)}/>
+                        <TButton title='Submit' function_1={saveExam}/>
                     </div>
                 }
             </div>

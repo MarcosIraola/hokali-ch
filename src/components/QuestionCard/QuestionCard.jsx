@@ -32,8 +32,6 @@ const QuestionCard = (props) => {
         setChosenAnswer(e.target.value)
     }
 
-    console.log(chosenAnswer)
-
     const renderAnswer = () => {
         switch (question.type) {
             // CASE 1 == VERDADERO O FALSO

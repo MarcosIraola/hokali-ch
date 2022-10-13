@@ -24,7 +24,7 @@
 }
 
 .tof_button_clicked {
-    border: 2px solid rgb(60, 164, 60);
+    background-color: rgb(40, 125, 196, 0.9);
 }
 
 .textarea {
