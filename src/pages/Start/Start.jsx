@@ -10,9 +10,6 @@ const Start = () => {
     const [completedExams, setCompletedExams] = useState([])
     const [incompletedExams, setIncompletedExams] = useState([])
 
-    const [search, setSearch] = useState('')
-    const [filteredExams, setFilteredExams] = useState([])
-
     useEffect(() => {
         let completed = [];
         let incompleted = [];
@@ -27,25 +24,7 @@ const Start = () => {
 
         setCompletedExams(completed);
         setIncompletedExams(incompleted);
-        // setFilteredExams(incompleted)
-
     }, [isFetching]);
-
-    // useEffect(() => {
-    //     const newVal = incompletedExams.filter((exam) => {
-    //         if (search === '') {
-    //             return exam;
-    //         } else {
-    //             return exam.title.toLowerCase().includes(search)
-    //         }
-    //     })
-
-    //     if(search.length > 0) {
-    //         setFilteredExams(newVal)
-    //     } else {
-    //         setFilteredExams(incompletedExams)
-    //     }
-    // }, [search])
 
     return (
         <div className={styles.container}>
@@ -73,12 +52,6 @@ const Start = () => {
             <div className={styles.incompleted_container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Exams to complete</h2>
-                    <input 
-                        className={styles.input} 
-                        type="text" 
-                        placeholder='Search..' 
-                        onInput={e => setSearch(e.target.value)}
-                    />
                 </div>
                 {
                     incompletedExams?.length < 1 
