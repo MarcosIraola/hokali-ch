@@ -12,10 +12,11 @@ const ExamView = () => {
     const navigate = useNavigate();
     const params = useParams();
     const { data: exams, isFetching } = useGetExamsQuery();
-    const [exam, setExam] = useState(null);
-
+    const [exam, setExam] = useState(undefined);
     const [showModal, setShowModal] = useState(false)
+    const [showScore, setShowScore] = useState()
 
+    // El header x-status-code acepta los valores de 200, 400 y 500.
     useEffect(() => {
         const url = `http://127.0.0.1:5432/exams/${params.id}`;
         const options = {
@@ -28,16 +29,16 @@ const ExamView = () => {
         fetch(url, options)
             .then(response => response.json())
             .then(payload => {
-                if(payload.status == 400) {
-                    console.log('ok')
+                if (!payload.status) {
+                    setExam(payload);
                 }
-                setExam(payload);
             })
             .catch(error => {
                 console.log(error)
             })
     }, [])
 
+    // TAMBIEN SE PUEDE FILTRAR DE LOS EXAMENES TRAIDOS DEL STORE, (YA QUE EL MOCKUP /params/:id TRAE SIEMPRE LA MISMA RESPUESTA)
     // useEffect(() => {
     //     exams.exams.filter((exam) => {
     //         if(exam.id == params.id) {
@@ -46,10 +47,33 @@ const ExamView = () => {
     //     })
     // }, [isFetching])
 
+    const saveExam = () => {
+        const url = `http://127.0.0.1:5432/exams/${params.id}`;
+        const options = {
+            method: 'PUT',
+            headers: {
+                "Content-type": "application/json",
+                "x-status-code": "200"
+            },
+            body: {
+                ...exam,
+                completed: true
+            }
+        };
+        fetch(url, options)
+            .then(response => response.json())
+            .then(data => {
+                setShowScore(data.response.score)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     return (
         <div className={styles.container}>
 
-            <Modal showModal={showModal} cancelClick={() => setShowModal(false)}/>
+            <Modal showModal={showModal} mainFunction={saveExam} cancelClick={() => setShowModal(false)}/>
             <span onClick={() => navigate(-1)} className={styles.goBack}>&#x3c; Go back</span>
             <div className={styles.info_container}>
                 <h1>{exam?.title}</h1>
@@ -63,15 +87,20 @@ const ExamView = () => {
                         </div>
                     ))
                 }
-                <div className={styles.error_container}>
-                    <p>Ups, hubo un error. Vuelva a intentarlo.</p>
-                </div>
-                <div className={styles.button_container}>
-                    <TButton title='Submit' function_1={() => setShowModal(true)}/>
-                    <TButton title='Go Back' function_1={() => navigate(-1)}/>
-                </div>
+                {
+                    exam == undefined ?
+                    <div className={styles.error_container}>
+                        <p>Hubo un error. Vuelva a intentarlo.</p>
+                        <div className={styles.button_container}>
+                            <TButton title='Go Back' function_1={() => navigate(-1)}/>
+                        </div>
+                    </div>
+                    :
+                    <div className={styles.button_container}>
+                        <TButton title='Submit' function_1={() => setShowModal(true)}/>
+                    </div>
+                }
             </div>
-           
         </div>
     )
 }

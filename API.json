@@ -15,7 +15,7 @@
       "responses": [
         {
           "uuid": "e4209c8e-6676-4845-ae04-faaae74c01f2",
-          "body": "{\n  \"exams\": [\n    {\n        \"id\": 1,\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"CSS\",\n        \"description\": \"Conoces esta reglas de CSS?\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"CSS es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n             {\"text\": \"Declarar un input\", \"isCorrect\": true},\n             {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n             {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Javascript\",\n        \"description\": \"How much Javascript do you know?\",\n        \"score\": 66,\n        \"completed\": true,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"JAVASCRIPT es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    }\n  ]\n}",
+          "body": "{\n  \"exams\": [\n    {\n        \"id\": 1,\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"Is HTML a programming language?\",\n            \"answers\": [\n              {\"text\": \"True\", \"isCorrect\": false},\n              {\"text\": \"False\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"What does HTML stand for?\",\n            \"answers\": [\n              {\"text\": \"Hyper Text Markup Language\", \"isCorrect\": true},\n              {\"text\": \"Home Tool Markup Language\", \"isCorrect\": false},\n              {\"text\": \"Hyperlinks and Text Markup Language\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"How many H tags are there?\",\n            \"answer\": \"6\"\n          }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"title\": \"CSS\",\n        \"description\": \"Conoces esta reglas de CSS?\",\n        \"score\": null,\n        \"completed\": false,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"CSS es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n             {\"text\": \"Declarar un input\", \"isCorrect\": true},\n             {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n             {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Javascript\",\n        \"description\": \"How much Javascript do you know?\",\n        \"score\": 66,\n        \"completed\": true,\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"JAVASCRIPT es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": true},\n              {\"text\": \"Falso\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -68,7 +68,7 @@
       "responses": [
         {
           "uuid": "bb230087-c8de-4ebc-8567-8339e24ee511",
-          "body": "{\n        \"id\": 1,\n        \"title\": \"HTML\",\n        \"description\": \"Test your HTML knowldege\",\n        \"questions\": [\n          { \n            \"type\": 1, \n            \"question\": \"HTML es un lenguaje de programación.\",\n            \"answers\": [\n              {\"text\": \"Verdadero\", \"isCorrect\": false},\n              {\"text\": \"Falso\", \"isCorrect\": true}\n            ]\n          },\n          { \n            \"type\": 2, \n            \"question\": \"<input> se usa para\",\n            \"answers\": [\n              {\"text\": \"Declarar un input\", \"isCorrect\": true},\n              {\"text\": \"Encerrar un titulo\", \"isCorrect\": false},\n              {\"text\": \"Escribir textos de mas de 100 caracteres\", \"isCorrect\": false}\n            ]\n          },\n          { \n            \"type\": 3, \n            \"question\": \"Cuantos tags existen para declarar titulos?\"\n          }\n        ]\n  }",
+          "body": "{\n  \"id\": 1,\n  \"title\": \"HTML\",\n  \"description\": \"Test your HTML knowldege\",\n  \"score\": null,\n  \"completed\": false,\n  \"questions\": [\n    { \n      \"type\": 1, \n      \"question\": \"Is HTML a programming language?\",\n      \"answers\": [\n        {\"text\": \"True\", \"isCorrect\": false},\n        {\"text\": \"False\", \"isCorrect\": true}\n      ]\n    },\n    { \n      \"type\": 2, \n      \"question\": \"What does HTML stand for?\",\n      \"answers\": [\n        {\"text\": \"Hyper Text Markup Language\", \"isCorrect\": true},\n        {\"text\": \"Home Tool Markup Language\", \"isCorrect\": false},\n        {\"text\": \"Hyperlinks and Text Markup Language\", \"isCorrect\": false}\n      ]\n    },\n    { \n      \"type\": 3, \n      \"question\": \"How many H tags are there?\",\n      \"answer\": \"6\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -103,6 +103,29 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false
+        },
+        {
+          "uuid": "dc7839ce-f6cf-44fb-8cdc-1e6038b9a727",
+          "body": "{\n  \"status\": 500,\n  \"statusText\": \"Internal Server Error\",\n  \"message\": \"Internal Server Error\",\n  \"response\": {}\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "x-status-code",
+              "value": "500",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
         }
       ],
       "enabled": true,
@@ -128,29 +151,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true
-        },
-        {
-          "uuid": "2ed0e920-0ec2-411c-9589-7386004ce2b3",
-          "body": "{\n  \"status\": 400,\n  \"statusText\": \"Bad Request\",\n  \"message\": \"Bad Request\",\n  \"response\": {}\n}",
-          "latency": 0,
-          "statusCode": 400,
-          "label": "",
-          "headers": [],
-          "filePath": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "x-status-code",
-              "value": "400",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false
         }
       ],
       "enabled": true,
